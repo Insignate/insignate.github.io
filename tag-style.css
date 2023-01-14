@@ -1,0 +1,87 @@
+:root{
+  color-scheme: dark;
+  background-color: black;
+}
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+nav{
+  height: 100%;
+  background-color: #222;
+  width: 94px;
+  position: fixed;
+  bottom: 0;
+  transition: height 0.3s;
+}
+nav > div{
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.3s;
+}
+nav a{
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  margin: 10px 10px 0 10px;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  border: solid 2px #AAA;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+nav a:hover{
+  background-color: #222;
+  border: solid 2px white;
+  box-shadow: 0 0 0.4em white;
+  
+}
+nav > div > img{
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  margin: 10px 10px 0 10px;
+  display: none;
+}
+
+main{
+  margin-left: 94px;
+  transition: margin-left 0.3s;
+}
+
+@media screen and (max-width: 600px){
+  nav > div > img{
+    display: block;
+  }
+  nav:hover > div > img{
+    display: none;
+  }
+  main{
+    margin-left: 0;
+  }
+  nav:hover + main{
+    margin-left: 94px;
+  }
+  nav .links{
+    opacity: 0;
+  }
+  nav .links:hover{
+    opacity: 1;
+  }
+
+  nav{
+    height: 94px;
+    border-top-right-radius: 20px;
+  }
+
+  nav:hover{
+    height: 360px;
+  }
+}
