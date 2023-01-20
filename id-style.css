@@ -1,3 +1,44 @@
 #errors{
   color: red;
 }
+
+#task-list-container > div{
+  border: solid 2px gray;
+  padding: 6px;
+  margin: 6px;
+  border-radius: 10px;
+}
+#task-list-container label{
+  font-size: 20px;
+}
+#task-list-container > div > h2{
+  border-bottom: solid 2px gray;
+  margin-bottom: 6px;
+}
+#save-my-work{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 30px;
+  animation: colorWheel 5s infinite linear;
+  border-radius: 6px;
+}
+
+@keyframes colorWheel{
+  0%{
+    background-color: #000;
+  }
+  25%{
+    background-color: #0A0;
+  }
+  50%{
+    background-color: #00F;
+  }
+  75%{
+    background-color: #F00;
+  }
+  100%{
+    background-color: #000;
+  }
+}
