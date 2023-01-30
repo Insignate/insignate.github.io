@@ -165,8 +165,8 @@ let courseInfo = [
     checkbox: [
       {
         checked: false,
-        text: 'Journal Week 6 make 1 replay to 1',
-        for: 'journal-week-6'
+        text: 'Journal Week 5 make 1 replay to 1',
+        for: 'journal-week-5'
       },
       {
         checked: false,
@@ -182,8 +182,8 @@ let courseInfo = [
     checkbox: [
       {
         checked: false,
-        text: 'Journal Week 5 make 1 reply to 1',
-        for: 'journal-week-5'
+        text: 'Journal Week 6 make 1 reply to 1',
+        for: 'journal-week-6'
       },
       {
         checked: false,
@@ -192,6 +192,27 @@ let courseInfo = [
         link: 'https://www.codecademy.com/learn/learn-sql',
         linkName: 'Codeacademy Sql'
       }
+    ]
+  },
+  {
+    header: "Not defined, but still do it ASAP",
+    current: true,
+    checkbox: [
+      {
+        checked: false,
+        text: 'Code Academy Html: ',
+        for: 'codeacad-html',
+        link: 'https://www.codecademy.com/learn/learn-html',
+        linkName: 'Codeacademy HTML'
+      },
+      {
+        checked: false,
+        text: 'Code Academy CSS: ',
+        for: 'codeacad-css',
+        link: 'https://www.codecademy.com/learn/learn-css',
+        linkName: 'Codeacademy CSS'
+      },
+      
     ]
   },
   
