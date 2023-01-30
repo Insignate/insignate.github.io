@@ -1,6 +1,13 @@
 #errors{
   color: red;
 }
+#main-tasks{
+  width: 100%;
+}
+#task-list-container{
+  max-width: 800px;
+  margin: auto;
+}
 
 #task-list-container > div{
   border: solid 2px gray;
