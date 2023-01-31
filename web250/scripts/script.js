@@ -3,7 +3,7 @@
 const taskListContainer = document.getElementById("task-list-container")
 const btnSaveWork = document.getElementById("save-my-work")
 
-const courseInfo = [
+let courseInfo = [
   {
     header: "Week 1",
     checkbox: [
