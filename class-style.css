@@ -10,22 +10,30 @@
   margin-bottom: 6px;
 }
 .current-week, .current-week h2{
-  border-color: red;
-  animation: anim-current-week 4s infinite linear;
+  animation: anim-current-week 7s infinite linear;
 }
 @keyframes anim-current-week{
 
   0%{
-    border-color: #F00;
+    border-color: hsl(0, 100%, 50%);
   }
-  33%{
-    border-color: #0F0;
+  17%{
+    border-color: hsl(60, 100%, 50%);
   }
-  66%{
-    border-color: #00F;
+  34%{
+    border-color: hsl(120, 100%, 50%);
+  }
+  51%{
+    border-color: hsl(180, 100%, 50%);
+  }
+  67%{
+    border-color: hsl(240, 100%, 50%);
+  }
+  84%{
+    border-color: hsl(300, 100%, 50%);
   }
   100%{
-    border-color: #F00;
+    border-color: hsl(360, 100%, 50%);
   }
 
 }
