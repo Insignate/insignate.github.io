@@ -200,14 +200,28 @@ const courseInfo = [
     checkbox: [
       {
         checked: false,
-        text: 'Code Academy Html: ',
+        text: 'Link: ',
+        for: 'codeacad-welcome',
+        link: 'https://www.codecademy.com/learn/welcome-to-codecademy',
+        linkName: 'Codeacademy Welcome'
+      },
+      {
+        checked: false,
+        text: 'Link: ',
+        for: 'codeacad-learn-code',
+        link: 'https://www.codecademy.com/learn/learn-how-to-code',
+        linkName: 'Codeacademy Learn How To Code'
+      },
+      {
+        checked: false,
+        text: 'Link: ',
         for: 'codeacad-html',
         link: 'https://www.codecademy.com/learn/learn-html',
         linkName: 'Codeacademy HTML'
       },
       {
         checked: false,
-        text: 'Code Academy CSS: ',
+        text: 'Link: ',
         for: 'codeacad-css',
         link: 'https://www.codecademy.com/learn/learn-css',
         linkName: 'Codeacademy CSS'
