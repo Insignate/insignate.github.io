@@ -137,7 +137,6 @@ let courseInfo = [
   },
   {
     header: "Week 4",
-    current: true,
     checkbox: [
       {
         checked: false,
@@ -162,6 +161,7 @@ let courseInfo = [
   },
   {
     header: "Week 5",
+    current: true,
     checkbox: [
       {
         checked: false,
