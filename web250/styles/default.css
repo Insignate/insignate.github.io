@@ -8,21 +8,10 @@
 body{
   font-family: Helvetica, Verdan, Tahoma;
 }
-header{
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  background-color: #222;
-}
-header > nav{
-  padding: 6px; 
-}
 main > section{
   margin: auto;
   max-width: 900px;
 }
-
 
 footer{
   background-color: #222;
@@ -55,11 +44,7 @@ ul{
 .contract-page > p{
   margin: 30px 20px;
 }
-.introduction-page{
-  max-width: 800px;
-  margin: auto;
-}
-.introduction-page > figure{
+figure{
   margin: auto;
   text-align: center;
   font-style: italic;
@@ -68,4 +53,19 @@ ul{
 .circle-bullet{
   list-style-type: circle;
   margin: 0 1.5em;
+}
+
+#main-page{
+  width: calc(100vw - 2px);
+  max-width: 900px;
+  margin: auto;
+}
+#main-page > div{
+  color-scheme: dark;
+  background-color: black;
+  color: white;
+}
+#main-page > h3{
+  background-color: #333;
+  color: white;
 }

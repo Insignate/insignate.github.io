@@ -232,7 +232,6 @@ let courseInfo = [
   
 ]
 
-
 const initialize = () => {
   getWork()
   if (btnSaveWork !== null)
@@ -311,7 +310,6 @@ const saveWork = () => {
   }, 2000)
 }
 
-
 const getWork = () => {
   const workCookie = getCookie("boxes")
 
@@ -350,6 +348,5 @@ function getCookie(cname) {
   }
   return "";
 }
-
 
 initialize()
