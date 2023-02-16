@@ -8,17 +8,16 @@
 body{
   font-family: Helvetica, Verdan, Tahoma;
 }
+main{
+  margin-top: 64px;
+}
 main > section{
   margin: auto;
   max-width: 900px;
 }
 
 footer{
-  background-color: #222;
-}
-footer > div > a{
-  text-decoration: none;
-  margin: 0 10px;
+  background-color: #111;
 }
 footer > nav{
   display: flex;
@@ -26,10 +25,25 @@ footer > nav{
   padding: 0 60px;
   flex-wrap: wrap;
   align-items: center;
+  height: 50px;
 }
 footer > nav > a{
-  padding: 30px 0;
+  flex-grow: 1;
+  padding: 10px 0;
+  margin: 0 4px ;
+  text-align: center;
+  border-radius: 6px;
+  transition: background-color 0.3s;
 }
+footer > nav > a:hover{
+  background-color: #000;
+}
+
+footer > nav > hr{
+  height: 80%;
+}
+
+
 footer > label{
   margin: 20px 0;
 }
@@ -40,15 +54,24 @@ footer > label, footer > div{
 ul{
   padding: 0 0 0 1.5em;
 }
-
-.contract-page > p{
-  margin: 30px 20px;
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #111;
+  width: 100vw;
+  padding: 4px 20px;
 }
+
 figure{
   margin: auto;
   text-align: center;
   font-style: italic;
   
+}
+.contract-page > p{
+  margin: 30px 20px;
 }
 .circle-bullet{
   list-style-type: circle;
