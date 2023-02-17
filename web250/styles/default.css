@@ -12,7 +12,9 @@ main > section{
   margin: auto;
   max-width: 900px;
 }
-
+header > div{
+  padding: 10px 20px;
+}
 footer{
   background-color: #111;
 }
@@ -59,7 +61,6 @@ header{
   z-index: 1;
   background-color: #111;
   width: 100vw;
-  padding: 4px 20px;
 }
 
 figure{
