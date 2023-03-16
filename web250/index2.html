@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+ 
+  <script src="https://unpkg.com/babel-standalone/babel.min.js" crossorigin></script> -->
+  <script src="./scripts/react.development.js"></script>
+  <script src="./scripts/react-dom.development.js"></script>
+  <script src="./scripts/babel.min.js"></script>
+  <script src="./scripts/app.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>WEB 250 | Rafael Sandalo's - Armadillo - Home</title>
+</head>
+<body id="body-root">
+
+  <div id="root"></div>
+  <script type="text/babel">
+    import Test from "./app.js"
+  
+    const container = document.getElementById('root')
+    const root = ReactDOM.createRoot(container)
+    const App = () => {
+      return <div><Test /></div>
+    };
+    // Render component in container
+    root.render(<App />)
+  </script>
+  
+</body>
+
+</html>

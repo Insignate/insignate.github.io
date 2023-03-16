@@ -4,8 +4,7 @@ $(function() {
   })
 });
 
-
-const sum = (...args) => args.reduce((a, b) => a + b);
+const sum = (...args) => args.reduce((a, b) => a + b, 1);
 
 const result = sum(1,2,3,4)
 console.log(result)
