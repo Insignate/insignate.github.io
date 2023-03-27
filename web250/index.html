@@ -1,108 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="./styles/default.css">
-  <link rel="stylesheet" href="./styles/jquery-ui.min.css">
-  <link rel="stylesheet" href="./styles/oscilloscope.css">
-  <script src="./scripts/validator.js" defer></script>
-  <script src="./scripts/jquery.js" defer></script>
-  <script src="./scripts/jquery-ui.min.js" defer></script>
-  <script src="./scripts/accordion.js" defer></script>
-  <script src="./scripts/oscilloscope.js" defer></script>
-  <script src="./scripts/audio.js" defer></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Pacifico|Dancing+Script|Quicksand|Montserrat&display=swap" rel="stylesheet">
+  <script src="./scripts/react.development.js"></script>
+  <script src="./scripts/react-dom.development.js"></script>
+  <script src="./scripts/babel.min.js"></script>
+  <script type="text/babel" src="./components/app.jsx"></script>
+  <script type="text/babel" src="./components/header.jsx"></script>
+  <script type="text/babel" src="./components/home.jsx"></script>
+  <script type="text/babel" src="./components/introduction.jsx"></script>
+  <script type="text/babel" src="./components/contract.jsx"></script>
+  <script type="text/babel" src="./components/footer.jsx"></script>
+  <script type="text/babel" src="./components/assignment.jsx"></script>
+  <script type="text/babel" src="./components/MyOwnBrand.jsx"></script>
+  <link rel="stylesheet" href="./styles/general.css">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>WEB 250 | Rafael Sandalo's - Armadillo - Home</title>
+  <title>WEB 250 | Rafael Sandalo's Radiant Seahorse</title>
 </head>
-<body>
-  <header>
-    <div>
-      <h1>WEB 250 | Rafael Sandalo's - Armadillo - Home</h1>
-      <a href="./course-tasks/">Class Tasks</a>
-    </div>
-  </header>
-  <main id="root">
-    <div id="main-page">
-      <h3>Home</h3>
-      <div>
-        <p>
-          This is my home page for web250-n801
-        </p>
-      </div>
-    
-      <h3>Rafael Sandalo - WEB250 Course Contract</h3>
-      <div>
-        <p>I, Rafael Sandalo agree to abide by the terms of the course contract in my Adv Markup and Scripting with my instructor Professor D.I. von Briese.</p>
-        <p>I understand that all work that I do on my school and personal website will be publicly available to the world, and will not put information there that is inappropriate for schoolwork, or that I wish to keep private.</p>    
-        <p>I also understand that it is my work that counts for attendance, not logins or showing up for class. As such, failure to turn in assignments may show as absences.</p>
-        <p>Signed, Rafael Sandalo, 1/23/2023</p>
-      </div>
-      <h3>Introduction</h3>
-      <div>
-        <figure>
-          <img src="./images/rafaelsandalo.jpg" alt="picture of Rafael Sandalo"/>
-          <figcaption>My id photo... looking kind of serius... couldn't smile...</figcaption>
-        </figure>
-        <h2>About me in WEB250</h2>
-        <ul>
-          <li>
-            <strong>Personal Background:</strong> 
-            I’m from Brazil, living in US for about 10 years
-          </li>
-          <li>
-            <strong>Professional Background:</strong>
-            since I'm on a F1 student visa, I could only work when I had CPT and OPT, at those times I created software, websites and databases to help increase productivity.
-          </li>
-          <li>
-            <strong>Academic Background:</strong>
-            I have a computer science degree and this semester I’m finishing data analytics and cyber security, and I really wish to finish full stack development the next semester
-          </li>
-          <li>
-            <strong>Background in Web 215/250:</strong>
-            I created applications in Node Js, Next.js, React, Express, PHP to communicate with a sql instance (sql server, mysql, postgres) and I wish to learn as much as I can with this class!
-          </li>
-          <li>
-            <strong>Primary Computer:</strong>
-            Windows 11 with Debian installed in the virtual box
-          </li>
-          <li>
-            <strong>Courses:</strong>
-          </li>
-          <li class="circle-bullet">WEB 250: because I need to understand more about the full stack aspect of transactions, safety, privacy and others</li>
-          <li class="circle-bullet">DBA 285: needed for my data analytics degree</li>
-          <li class="circle-bullet">CSC 174: Full stack degree in junction with WEB 250</li>
-          <li class="circle-bullet">CCT 121: Cyber security degree</li>
-          <li> 
-            <strong>Funny & Interesting item about Myself:</strong> 
-            I had to go ask my friends what is funny and interesting thing about myself, everybody had the same answer which is: unique kind of humor that finds everything funny on things where people would not find, knows a lot about computer, give concise and to the point computer answers.
-          </li>
-          <li>
-            <strong>I’d also like to share:</strong>
-            I have lots of experience with data storage (Hard drives and SSDs)
-          </li>
-        </ul>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <nav>
-      <a href="https://insignate.github.io/web250/">web250</a> <hr>
-      <a href="https://github.com/Insignate/insignate.github.io">Github io</a> <hr>
-      <a href="https://github.com/Insignate">Github</a> <hr> 
-      <a href="https://www.freecodecamp.org/rsandal">FreeCodeCamp</a> <hr> 
-      <a href="https://www.codecademy.com/profiles/rsandal">Codecademy</a> <hr>
-      <a href="https://www.linkedin.com/in/rafael-sandalo-40ba08179/">Linkedin</a> 
-    </nav>
-    <label>Designed by © R.Sandalo, 23 January 2023</label>
-    <label>Using <a href="https://jqueryui.com">JQuery + JQuery-ui</a></label>
-    <div>
-      <a id="link_html">
-        <img src="./images/img_validation.html5.png" alt="Validate Html!" />
-      </a>
-      <a id="link_css">
-        <img src="./images/img_validation_css.png" alt="Validate CSS!" />
-      </a>
-    </div>
-  </footer>
-  <div id="last"></div>
+<body id="body-root">
+  <div id="root">
+  </div>
 </body>
+  
 </html>
