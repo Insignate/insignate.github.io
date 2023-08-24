@@ -83,7 +83,7 @@ window.addEventListener("load", () => {
   let barWidth = canvas.width/(fftSize/2)
   const createBars = function(){
     for (let i = 0; i < (fftSize/2); i++){
-      bars.push(new Bar(barWidth*i, 200, 0.5, 50, 'red', i))
+      bars.push(new Bar(barWidth*i, 200, 2, 50, 'red', i))
     }
   }
   createBars()
