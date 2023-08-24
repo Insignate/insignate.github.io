@@ -13,6 +13,9 @@ window.addEventListener("load", () => {
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
 
+  canvas.width = 500
+  canvas.height = 500
+
   class Bar{
     constructor(x, y, width, height, color, index){
       this.x = x
@@ -23,7 +26,7 @@ window.addEventListener("load", () => {
       this.index = index
     }
     update(micInput){
-      this.height = micInput
+      this.height = micInput * 1000
     }
     draw(context, volume){
       context.fillStyle = this.color
@@ -69,7 +72,7 @@ window.addEventListener("load", () => {
     }
   }
   const fftSize = 512
-  const microphone =  new Microphone(fftSize)
+  const microphone = new Microphone(fftSize)
   let bars = []
   let barWidth = canvas.width/(fftSize/2)
   const createBars = function(){
@@ -87,7 +90,7 @@ window.addEventListener("load", () => {
       console.log(samples)
       bars.forEach(function(bar, i){
         bar.update(samples[i])
-        bar.draw(ctx,1)
+        bar.draw(ctx, 1)
       })
     }
     
