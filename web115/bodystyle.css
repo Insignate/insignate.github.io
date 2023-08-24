@@ -1,7 +1,92 @@
 
+
+main, footer, header{
+  position: relative;
+  z-index: 1;
+}
+footer{
+  text-align: center;
+}
+
+.pic-style{
+  border-radius: 10px;
+  box-shadow: 0 0 10px 4px black;
+}
+.hidden{
+  color: red;
+  animation: carousel-color 2s infinite;
+}
+#seahorse{
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 400px;
+  opacity: 1;
+}
+#seahorse > svg path{
+  stroke-dasharray: 3950;
+  
+  animation: seahorsePath 2s infinite;
+
+}
+
 @media(prefers-color-scheme: dark){
   *{
-    background-color: black;
     color: white
+  }
+  body{
+    background-color: black;
+  }
+  .pic-style{
+    box-shadow: 0 0 10px 4px white;
+
+  }
+}
+
+@keyframes seahorsePath{
+  0%, 100%{
+    stroke-dashoffset: 3400;
+  }
+  50%{
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes carousel-color {
+  100%,0%{
+    color: rgb(255,0,0);
+  }
+  8%{
+    color: rgb(255,127,0);
+  }
+  16%{
+    color: rgb(255,255,0);
+  }
+  25%{
+    color: rgb(127,255,0);
+  }
+  33%{
+    color: rgb(0,255,0);
+  }
+  41%{
+    color: rgb(0,255,127);
+  }
+  50%{
+    color: rgb(0,255,255);
+  }
+  58%{
+    color: rgb(0,127,255);
+  }
+  66%{
+    color: rgb(0,0,255);
+  }
+  75%{
+    color: rgb(127,0,255);
+  }
+  83%{
+    color: rgb(255,0,255);
+  }
+  91%{
+    color: rgb(255,0,127);
   }
 }

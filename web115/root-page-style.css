@@ -1,0 +1,26 @@
+body{
+  margin: 0 auto;
+  max-width: 900px;
+}
+.hidden{
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.circle-bullet{
+  margin-left: 26px;
+}
+.pic-style{
+  width: 200px;
+  margin-bottom: 6px;
+}
+#title-header{
+  margin-bottom: 2px;
+}
+#title-header:hover + .hidden{
+  opacity: 1;
+
+}
+#picture-info{
+  text-align: center;
+}
