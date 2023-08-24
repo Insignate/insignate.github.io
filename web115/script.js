@@ -34,14 +34,9 @@ window.addEventListener("load", () => {
   class Microphone{
     constructor(fftSize){
       this.initialized = false 
-      this.init()
+      this.init(fftSize)
     }
-    async init(){
-
-      //.then((stream) => {
-        //   this.audioContext = new this.audioContext()
-        //   this.microphone = this.audioContext.createMediaStreamSource(stream)
-        //   this.analyzer
+    async init(fftSize){
       try {
         const navi = await navigator.mediaDevices.getUserMedia({audio: true})
       
@@ -55,8 +50,7 @@ window.addEventListener("load", () => {
         this.initialized = true
       } catch (error) {
         console.error(error)
-      }  
-      
+      }   
     }
     getSamples(){
       this.analyzer.getByteTimeDomainData(this.dataArray)
@@ -73,9 +67,6 @@ window.addEventListener("load", () => {
       let volume = Math.sqrt(sum / normSamples.length)
       return volume
     }
-    
-
-     
   }
   const fftSize = 512
   const microphone =  new Microphone(fftSize)
