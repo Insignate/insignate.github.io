@@ -13,9 +13,6 @@ window.addEventListener("load", () => {
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
 
-  canvas.width = 500
-  canvas.height = 500
-
   class Bar{
     constructor(x, y, width, height, color, index){
       this.x = x
@@ -42,7 +39,7 @@ window.addEventListener("load", () => {
       context.translate(canvas.width/2, canvas.height/2)
       context.rotate(this.index *0.01)
       context.beginPath()
-      context.moveTo(this.x, this.y)
+      context.moveTo(0.1, this.y)
       context.lineTo(this.x, this.y, this.height)
       context.stroke()
       context.restore()

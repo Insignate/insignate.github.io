@@ -17,17 +17,21 @@ footer{
   animation: carousel-color 2s infinite;
 }
 #seahorse{
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 400px;
   height: 400px;
   opacity: 1;
 }
 #seahorse > svg path{
   stroke-dasharray: 3950;
-  
   animation: seahorsePath 2s infinite;
-
+}
+#canvas-style{
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 @media(prefers-color-scheme: dark){
