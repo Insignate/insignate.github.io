@@ -33,14 +33,16 @@ window.addEventListener("load", () => {
     }
     draw(context, volume){
       context.strokeStyle = this.color
+      context.lineWidth = this.width
       
-      //context.lineWidth = this.width
       context.save()
       context.translate(canvas.width/2, canvas.height/2)
       context.rotate(this.index *0.01)
       context.beginPath()
-      context.moveTo(0.1, this.y)
-      context.lineTo(this.x, this.y, this.height)
+      // context.moveTo(0.1, this.y)
+      // context.lineTo(this.x, this.y, this.height)
+      context.bezierCurveTo(this.x/2, this.y/2, this.height * -0.5 - 150, 
+        this.height + 50, this.x, this.y)
       context.stroke()
       context.restore()
       
@@ -95,7 +97,7 @@ window.addEventListener("load", () => {
   let barWidth = canvas.width/(fftSize/2)
   const createBars = function(){
     for (let i = 0; i < (fftSize/2); i++){
-      bars.push(new Bar(barWidth*i, 200, 2, 50, 'red', i))
+      bars.push(new Bar(0, i, 0.5, 50, 'red', i))
     }
   }
   createBars()
