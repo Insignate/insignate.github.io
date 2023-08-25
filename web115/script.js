@@ -23,7 +23,7 @@ window.addEventListener("load", () => {
       this.index = index
     }
     update(micInput){
-      const sound = micInput * 1000
+      const sound = micInput * 1500
       if (sound > this.height){
         this.height = sound
       } else {
@@ -37,13 +37,21 @@ window.addEventListener("load", () => {
       context.save()
       context.rotate(this.index *0.043)
       context.beginPath()
-      // context.moveTo(0.1, this.y)
-      // context.lineTo(this.x, this.y, this.height)
       context.bezierCurveTo(this.x/2, this.y/2, this.height * -0.5 - 150, 
         this.height + 50, this.x, this.y)
       context.stroke()
-      context.restore()
       
+      if(this.index > 100){
+        context.beginPath();
+        context.arc(this.x, this.y + 10 + this.height/2 + this.height * 0.1,
+          this.height * 0.05, 0, Math.PI * 2)
+        context.stroke()
+        context.beginPath()
+        context.moveTo(this.x, this.y + 10)
+        context.lineTo(this.x, this.y + 10 + this.height/2)
+        context.stroke()
+      }
+      context.restore()
       
     }
   }
@@ -116,7 +124,7 @@ window.addEventListener("load", () => {
       ctx.restore()
 
       softVolue = softVolue *0.9 + volume * 0.1
-      snail.style.transform = 'translate(-50%, -50%) scale(' + (1 + softVolue), (1 + softVolue) + ')'
+      snail.style.transform = 'translate(-50%, -50%) scale(' + (1 + softVolue * 3), (1 + softVolue * 3) + ')'
     }
     requestAnimationFrame(animate)
   }
