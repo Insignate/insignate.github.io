@@ -115,7 +115,7 @@ window.addEventListener("load", () => {
       })
       ctx.restore()
 
-      softVolue = softVolue *0.9
+      softVolue = softVolue *0.9 + volume * 0.1
       snail.style.transform = 'translate(-50%, -50%) scale(' + (1 + softVolue), (1 + softVolue) + ')'
     }
     requestAnimationFrame(animate)
