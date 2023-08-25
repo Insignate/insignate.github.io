@@ -8,7 +8,7 @@ cssValidationLink.href = "https://jigsaw.w3.org/css-validator/validator?uri=" + 
 window.addEventListener("load", () => {
   const canvas = document.getElementById('canvas-1')
   const ctx = canvas.getContext('2d')
-  const animal = document.getElementById('seahorse')
+  const animal = document.getElementById('snail')
 
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
@@ -34,10 +34,9 @@ window.addEventListener("load", () => {
     draw(context, volume){
       context.strokeStyle = this.color
       context.lineWidth = this.width
-      
       context.save()
       context.translate(canvas.width/2, canvas.height/2)
-      context.rotate(this.index *0.01)
+      context.rotate(this.index *0.03)
       context.beginPath()
       // context.moveTo(0.1, this.y)
       // context.lineTo(this.x, this.y, this.height)
@@ -97,7 +96,7 @@ window.addEventListener("load", () => {
   let barWidth = canvas.width/(fftSize/2)
   const createBars = function(){
     for (let i = 0; i < (fftSize/2); i++){
-      bars.push(new Bar(0, i, 0.5, 50, 'red', i))
+      bars.push(new Bar(0, i * 0.9,1 , 50, 'red', i))
     }
   }
   createBars()
@@ -107,6 +106,8 @@ window.addEventListener("load", () => {
     if (microphone.initialized === true){
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       const samples = microphone.getSamples()
+      ctx.save()
+      //ctx.translate(canvas.width/2 -70, canvas.height/2, + 50)
       bars.forEach(function(bar, i){
         bar.update(samples[i])
         bar.draw(ctx, 1)
