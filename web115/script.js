@@ -26,35 +26,56 @@ window.addEventListener("load", () => {
       this.index = index
     }
     update(micInput){
-      this.height = micInput * 1000
+      const sound = micInput * 1000
+      if (sound > this.height){
+        this.height = sound
+      } else {
+        this.height -= this.height *0.03
+      }
+      
     }
     draw(context, volume){
-      context.fillStyle = this.color
-      context.fillRect(this.x, this.y, this.width, this.height)
+      context.strokeStyle = this.color
+      
+      //context.lineWidth = this.width
+      context.save()
+      context.translate(canvas.width/2, canvas.height/2)
+      context.rotate(this.index *0.01)
+      context.beginPath()
+      context.moveTo(this.x, this.y)
+      context.lineTo(this.x, this.y, this.height)
+      context.stroke()
+      context.restore()
+      
+      
     }
   }
 
   class Microphone{
     constructor(fftSize){
       this.initialized = false 
-      this.init(fftSize)
-    }
-    async init(fftSize){
-      try {
-        const navi = await navigator.mediaDevices.getUserMedia({audio: true})
-      
+      navigator.mediaDevices.getUserMedia({audio: true}).then(function(stream){
         this.audioContext = new AudioContext()
-        this.microphone = this.audioContext.createMediaStreamSource(navi)
+        this.microphone = this.audioContext.createMediaStreamSource(stream)
         this.analyzer = this.audioContext.createAnalyser();
         this.analyzer.fftSize = fftSize
         const bufferLength = this.analyzer.frequencyBinCount
         this.dataArray = new Uint8Array(bufferLength)
         this.microphone.connect(this.analyzer)
         this.initialized = true
-      } catch (error) {
+      }.bind(this)).catch(function(error){
         console.error(error)
-      }   
+      })
     }
+    // async init(fftSize){
+    //   try {
+    //     const navi = await navigator.mediaDevices.getUserMedia({audio: true})
+      
+        
+    //   } catch (error) {
+        
+    //   }   
+    // }
     getSamples(){
       this.analyzer.getByteTimeDomainData(this.dataArray)
       let normSamples = [...this.dataArray].map(e => e/128-1)
@@ -87,7 +108,6 @@ window.addEventListener("load", () => {
     if (microphone.initialized === true){
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       const samples = microphone.getSamples()
-      console.log(samples)
       bars.forEach(function(bar, i){
         bar.update(samples[i])
         bar.draw(ctx, 1)
