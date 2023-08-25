@@ -72,15 +72,6 @@ window.addEventListener("load", () => {
         console.error(error)
       })
     }
-    // async init(fftSize){
-    //   try {
-    //     const navi = await navigator.mediaDevices.getUserMedia({audio: true})
-      
-        
-    //   } catch (error) {
-        
-    //   }   
-    // }
     getSamples(){
       this.analyzer.getByteTimeDomainData(this.dataArray)
       let normSamples = [...this.dataArray].map(e => e/128-1)
@@ -129,5 +120,10 @@ window.addEventListener("load", () => {
     requestAnimationFrame(animate)
   }
   animate()
+
+  window.addEventListener('resize', function(){
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+  })
 })
 
