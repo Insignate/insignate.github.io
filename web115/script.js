@@ -8,7 +8,7 @@ cssValidationLink.href = "https://jigsaw.w3.org/css-validator/validator?uri=" + 
 window.addEventListener("load", () => {
   const canvas = document.getElementById('canvas-1')
   const ctx = canvas.getContext('2d')
-  const animal = document.getElementById('snail')
+  const snail = document.getElementById('snail')
 
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
@@ -94,17 +94,19 @@ window.addEventListener("load", () => {
   let bars = []
   let barWidth = canvas.width/(fftSize/2)
   const createBars = function(){
-    for (let i = 0; i < (fftSize/2); i++){
-      bars.push(new Bar(0, i * 0.9,1 , 50, 'red', i))
+    for (let i = 1; i < (fftSize/2); i++){
+      const color = 'hsl(' + i*2 + ', 100%, 50%)'
+      bars.push(new Bar(0, i * 0.9,1 , 50, color, i))
     }
   }
   createBars()
 
-
+  let softVolue = 0
   function animate(){
     if (microphone.initialized === true){
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       const samples = microphone.getSamples()
+      const volume = microphone.getVolume()
       ctx.save()
       ctx.translate(canvas.width/2 - 70, canvas.height/2 + 90)
       bars.forEach(function(bar, i){
@@ -112,9 +114,10 @@ window.addEventListener("load", () => {
         bar.draw(ctx, 1)
       })
       ctx.restore()
-    }
-    
 
+      softVolue = softVolue *0.9
+      snail.style.transform = 'translate(-50%, -50%) scale(' + (1 + softVolue), (1 + softVolue) + ')'
+    }
     requestAnimationFrame(animate)
   }
   animate()
