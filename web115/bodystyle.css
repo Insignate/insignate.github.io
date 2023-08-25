@@ -12,20 +12,20 @@ footer{
   border-radius: 10px;
   box-shadow: 0 0 10px 4px black;
 }
-.hidden{
+.hidden, .hidden > strong{
   color: red;
   animation: carousel-color 2s infinite;
 }
 #snail{
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 400px;
-  height: 400px;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
   opacity: 1;
 }
 #snail > svg path{
-  stroke-dasharray: 550;
+  stroke-dasharray: 1550;
   animation: snailPath 2s infinite;
 }
 #canvas-style{

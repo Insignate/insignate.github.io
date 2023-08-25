@@ -35,8 +35,7 @@ window.addEventListener("load", () => {
       context.strokeStyle = this.color
       context.lineWidth = this.width
       context.save()
-      context.translate(canvas.width/2, canvas.height/2)
-      context.rotate(this.index *0.03)
+      context.rotate(this.index *0.043)
       context.beginPath()
       // context.moveTo(0.1, this.y)
       // context.lineTo(this.x, this.y, this.height)
@@ -107,11 +106,12 @@ window.addEventListener("load", () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       const samples = microphone.getSamples()
       ctx.save()
-      //ctx.translate(canvas.width/2 -70, canvas.height/2, + 50)
+      ctx.translate(canvas.width/2 - 70, canvas.height/2 + 90)
       bars.forEach(function(bar, i){
         bar.update(samples[i])
         bar.draw(ctx, 1)
       })
+      ctx.restore()
     }
     
 
