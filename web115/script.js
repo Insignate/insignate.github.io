@@ -4,6 +4,10 @@ const cssValidationLink = document.getElementById("css-validation")
 htmlValidationLink.href = "https://validator.w3.org/nu/?doc=" + window.location.href;
 cssValidationLink.href = "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href;
 
+document.getElementById('find-me').addEventListener("click", () => {
+  document.getElementById('snail').classList.add("show-items")
+  document.getElementById('canvas-style').classList.add('show-items')
+})
 
 window.addEventListener("load", () => {
   const canvas = document.getElementById('canvas-1')
