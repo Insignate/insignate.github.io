@@ -6,7 +6,13 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="root-page-style.css">
     <link rel="stylesheet" href="bodystyle.css">
-    
+    <style>  
+      @media(prefers-color-scheme: dark){
+        *{ color: white }
+        body,button{ background-color: black;  }
+        .pic-style{ box-shadow: 0 0 10px 4px white; }
+      }
+    </style>
   </head>
   <body>
     
@@ -68,8 +74,6 @@
         <a href="https://www.freecodecamp.org/rsandal">FreeCodeCamp</a> | 
         <a href="https://www.codecademy.com/profiles/rsandal">Codecademy</a> | 
         <a href="https://www.linkedin.com/in/rafael-sandalo-40ba08179/">Linkedin</a>  
-        
-        
       </nav>
       <label>Designed by © R.Sandalo, 23 January 2023</label>
       <div>
@@ -79,7 +83,6 @@
           <img src="./images/validcss.png" alt="Validate CSS (Not Working Yet)">
         </a>
       </div>
-      
     </footer>
     <div class="canvas-style" id="canvas-style">
       <canvas id="canvas-1"></canvas>
