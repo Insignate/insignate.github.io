@@ -1,4 +1,18 @@
-#bav-bar{
+nav{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+nav a{
+  padding: 10px 16px;
+  background-color: black;
+}
+nav a:hover{
+  background-color: blue;
+}
+
+#nav-bar{
+  max-width: 350px;
 }

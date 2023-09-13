@@ -7,16 +7,11 @@ body{
 }
 a{
   text-decoration: none;
-  color: #AFA;
+  /* color: #AFA; */
+  transition: background-color 0.3s;
+  border-radius: 10px;
+  
 }
-
-a:visited{
-  color: rgb(255, 0, 0);
-}
-a:hover{
-  color: #A08;
-}
-
 
 
 
