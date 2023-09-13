@@ -1,0 +1,12 @@
+footer{
+  text-align: center;
+}
+footer > nav{
+  margin-bottom: 10px;
+}
+footer > div{
+  margin-top: 10px;
+}
+#html-validation{
+  margin-right: 30px;
+}
