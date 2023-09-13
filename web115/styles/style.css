@@ -1,0 +1,31 @@
+*{
+  font-family: Georgia, serif;
+}
+body{
+  background-color: #004;
+  color: rgb(200,200,255);
+}
+a{
+  text-decoration: none;
+  
+  color: #AFA;
+}
+
+a:visited{
+  color: rgb(255, 0, 0);
+}
+a:hover{
+  color: #A08;
+}
+
+
+
+
+@media(prefers-color-scheme: dark){
+
+  body,button{ 
+    background-color: black;  
+    color: white;
+  }
+  .pic-style{ box-shadow: 0 0 10px 4px white; }
+}
