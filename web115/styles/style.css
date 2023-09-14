@@ -1,4 +1,7 @@
 *{
+  font-family: 'Courier New', Courier, monospace;
+}
+h1{
   font-family: Georgia, serif;
 }
 body{
@@ -10,9 +13,10 @@ a{
   /* color: #AFA; */
   transition: background-color 0.3s;
   border-radius: 10px;
-  
 }
-
+a:visited{
+  color: #0066cc;
+}
 
 
 @media(prefers-color-scheme: dark){
