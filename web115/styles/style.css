@@ -7,6 +7,7 @@ h1{
 body{
   background-color: #0CF;
   color: #003;
+  
 }
 a{
   text-decoration: none;
@@ -16,6 +17,10 @@ a{
 }
 a:visited{
   color: #0066cc;
+}
+.max-width-900{
+  max-width: 900px;
+  margin: auto;
 }
 
 
