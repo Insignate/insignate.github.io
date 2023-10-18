@@ -7,10 +7,9 @@ nav{
 }
 nav a{
   padding: 10px 16px;
-  background-color: black;
 }
 nav a:hover{
-  background-color: blue;
+  background-color: #BBF;
 }
 
 #nav-bar{
