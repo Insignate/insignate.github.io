@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>FizzBuzzBang | Rafael Sandalo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="script.js" defer></script>
+    <script src="scripts/fizzbuzzbang.js" defer></script>
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/style.css">
+
+  </head>
+  
+  <body class="max-width-900">
+    <header>
+      <nav id="nav-bar">
+        <a href="./index.html">Home</a>
+        <a href="./introduction.html">Introduction</a>
+        <a href="./contract.html">Contract</a>
+        <a href="./brand.html">Brand</a>
+      </nav>
+    </header>
+    <main>
+      <h2 id="fizz-version">FizzBuzzBang Version 1<label id="maybe">... 2 and 3 maybe? =S</label></h2>
+      <div class="fizzbuzzbang">
+        <table id="fizz-table">
+          <thead>
+            <tr>
+              <th>Detail</th>
+              <th>User Option</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label for="fizznum">Fizz Number:</label></td>
+              <td><input type="number" id="fizznum" placeholder="Enter Fizz number" value="3"></td>
+            </tr>
+            <tr>
+              <td><label for="fizzkey">Fizz Keyword:</label></td>
+              <td><input id="fizzkey" type="text" placeholder="Enter Fizz Keyword" value="Fizz!"></td>
+            </tr>
+            <tr>
+              <td><label for="buzznum">Buzz Number:</label></td>
+              <td><input type="number" id="buzznum" placeholder="Enter Buzz number" value="5"></td>
+            </tr>
+            <tr>
+              <td><label for="buzzkey">Buzz Keyword:</label></td>
+              <td><input id="buzzkey" type="text" placeholder="Enter Buzz Keyword" value="Buzz!"></td>
+            </tr>
+            <tr>
+              <td><label for="bangnum">Bang Number:</label></td>
+              <td><input type="number" id="bangnum" placeholder="Enter Bang number" value="7"></td>
+            </tr>
+            <tr>
+              <td><label for="bangkey">Bang Keyword:</label></td>
+              <td><input id="bangkey" type="text" placeholder="Enter Bang Keyword" value="Bang!"></td>
+            </tr>
+            <tr>
+              <td><label for="numbers">Calculate Numbers:</label></td>
+              <td><input id="numbers" type="text" placeholder="Enter max number" value="100"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button id="fizzCalculate">Calculate FizzBuzzBang!</button></td>
+            </tr>
+          </tbody>
+          
+        </table>
+        <div id="fizzresult" class="fizzresstyle"></div>
+      </div>
+      
+    </main>
+    <footer>
+      <nav>
+        <a href="https://github.com/Insignate">Github</a> | 
+        <a href="https://insignate.github.io/">Github.io</a> |
+        <a href="https://insignate.github.io/web115/">WEB115</a> |
+        <a href="https://www.freecodecamp.org/rsandal">FreeCodeCamp</a> | 
+        <a href="https://www.codecademy.com/profiles/rsandal">Codecademy</a> | 
+        <a href="https://www.linkedin.com/in/rafael-sandalo-40ba08179/">Linkedin</a>  
+      </nav>
+      <label>Designed by R.Sandalo ©, 23 August 2023</label>
+      <div>
+        <a id="html-validation">
+          <img src="./images/validhtml.png" alt="Validate HTML"></a>
+        <a id="css-validation">
+          <img src="./images/validcss.png" alt="Validate CSS (Not Working Yet)">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
