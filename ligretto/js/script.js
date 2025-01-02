@@ -5,7 +5,7 @@ const gameName = document.getElementById('game-name')
 
 const gameNames = ['Ligretto', 'Livretto', 'Negresco']
 
-document.getElementById('new-game').addEventListener('click', e => {
+document.getElementById('new-game').addEventListener('submit', e => {
     e.preventDefault()
     const qttPlayers = parseInt(IptPlayerQtt.value)
 
