@@ -24,7 +24,6 @@ const triggerNameChange = () => {
 
     const rndInt = Math.floor(Math.random() * 3)
 
-    console.log(rndInt)
     setTimeout(() => {
         gameName.innerText = gameNames[rndInt] + '???'
     }, 350)
