@@ -1,0 +1,116 @@
+:root{
+    --box-shadow: 0 0 4px 2px #AAA;
+    --input-border-color: #049;
+    /* --outline: #090; */
+    --btn-background-color: #BBB;
+    --btn-hover: #999;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: solid 2px var(--outline);
+}
+
+input{
+    border: solid 2px var(--input-border-color);
+    padding: 4px;
+    border-radius: 4px;
+}
+
+button{
+    padding: 4px;
+    background-color: var(--btn-background-color);
+    border: none;
+    border-radius: 6px;
+}
+
+button:hover{
+    background-color: var(--btn-hover);
+}
+
+
+
+.single-player-name{
+    border: none;
+}
+
+.single-player-name:focus{
+    border: solid 2px var(--input-border-color);
+}
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hide{
+    opacity: 0;
+}
+
+.players-qtt-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.points-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4px;
+    gap: 4px;
+}
+
+.points-container > button{
+    flex-shrink: 1;
+    flex-grow: 1;
+    
+}
+
+.header{
+    box-shadow: var(--box-shadow);
+    padding: 4px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.window{
+    box-shadow: var(--box-shadow);
+    margin: 8px;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+#all-players{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#game-full-name{
+    transition: opacity .3s;
+}
+
+
+@media(prefers-color-scheme: dark){
+    :root{
+        --box-shadow: 0 0 4px 2px #000;
+        /* --outline: #777; */
+        --btn-background-color: #555;
+
+        --btn-hover: #444;
+    }
+
+    body, html, input, select{
+        background-color: #222;
+        color: #CCC;
+    }
+
+
+}
