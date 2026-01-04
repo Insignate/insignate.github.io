@@ -6,6 +6,7 @@
     --btn-hover: #999;
 
     --border-color: #631830;
+    --li-bk-color: #777;
 }
 
 *{
@@ -31,15 +32,21 @@ button:hover{
     background-color: var(--btn-hover);
 }
 
-
-
 li{
     list-style-type: none;
     border-bottom: solid 2px var(--border-color);
     margin-bottom: 1em;
     padding-bottom: .3em;
+    border-radius: .3em;
 }
 
+li:last-child{
+    margin-bottom: 0;
+}
+
+li:hover{
+    background-color: var(--li-bk-color);
+}
 
 .single-player-name{
     border: none;
@@ -118,6 +125,8 @@ li{
         --btn-hover: #444;
 
         --border-color: #631830;
+
+        --li-bk-color: #530920;
     }
 
     body, html, input, select{
