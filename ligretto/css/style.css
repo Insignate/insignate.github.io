@@ -4,6 +4,8 @@
     /* --outline: #090; */
     --btn-background-color: #BBB;
     --btn-hover: #999;
+
+    --border-color: #631830;
 }
 
 *{
@@ -19,7 +21,7 @@ input{
 }
 
 button{
-    padding: 4px;
+    padding: .5em 1em;
     background-color: var(--btn-background-color);
     border: none;
     border-radius: 6px;
@@ -31,8 +33,26 @@ button:hover{
 
 
 
+li{
+    list-style-type: none;
+    border-bottom: solid 2px var(--border-color);
+    margin-bottom: 1em;
+    padding-bottom: .3em;
+}
+
+
 .single-player-name{
     border: none;
+}
+
+.window-container{
+    display: flex;
+    justify-content: center;
+}
+
+.points-container{
+    display: inline-block;
+
 }
 
 .single-player-name:focus{
@@ -41,8 +61,8 @@ button:hover{
 
 .game-container{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .hide{
@@ -57,18 +77,9 @@ button:hover{
     align-items: flex-start;
 }
 
-.points-container{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 4px;
-    gap: 4px;
-}
-
-.points-container > button{
-    flex-shrink: 1;
-    flex-grow: 1;
-    
+.mod-points{
+    padding: 0 1em;
+    align-content: center;
 }
 
 .header{
@@ -105,6 +116,8 @@ button:hover{
         --btn-background-color: #555;
 
         --btn-hover: #444;
+
+        --border-color: #631830;
     }
 
     body, html, input, select{

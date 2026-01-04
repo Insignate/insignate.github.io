@@ -21,7 +21,6 @@ setInterval(() => {
 }, 4000)
 
 const triggerNameChange = () => {
-
     const rndInt = Math.floor(Math.random() * 3)
 
     setTimeout(() => {
@@ -45,19 +44,21 @@ const createPlayers = qttPlayers => {
 
         const plusBtn = createModifyPointsBtn(SpnPontos, IptPointsModifier, true)
 
-        const minusBtn = createModifyPointsBtn(SpnPontos, IptPointsModifier, false)
+        // const minusBtn = createModifyPointsBtn(SpnPontos, IptPointsModifier, false)
 
         const pointsContainer = createBtnModifierContainer()
 
         pointsContainer.appendChild(plusBtn)
 
-        pointsContainer.appendChild(minusBtn)
+        // pointsContainer.appendChild(minusBtn)
 
         gameContainer.appendChild(IptPlayerName)
 
-        gameContainer.appendChild(SpnPontos)
+        
 
         gameContainer.appendChild(IptPointsModifier)
+
+        gameContainer.appendChild(SpnPontos)
 
         gameContainer.appendChild(pointsContainer)
 
@@ -75,7 +76,9 @@ const createBtnModifierContainer = () => {
 
 const createContainer = () => {
     const container = document.createElement('div')
+
     container.classList.add('game-container')
+    
     container.classList.add('window')
     
     return container
@@ -85,12 +88,13 @@ const createModifyPointsBtn = (spanPointsHolder, pointModifier, add) => {
     const btn = document.createElement('button')
 
     if(add)
-        btn.innerText = '+'
+        btn.innerText = 'Calcular'
     else 
         btn.innerText = '-'
 
     btn.addEventListener('click', () => {
         const playerPoints = parseInt(spanPointsHolder.innerText)
+        
         const modifyPoints = parseInt(pointModifier.value)
 
         if (isNaN(playerPoints) || isNaN(modifyPoints)){
@@ -118,6 +122,9 @@ const createPlayerName = index => {
 
 const createPointsHolder = () => {
     const spnPoints = document.createElement('span')
+
+    spnPoints.classList.add('mod-points')
+    
     spnPoints.innerText = 0
 
     return spnPoints
@@ -127,6 +134,7 @@ const createPointsModifier = () => {
     const pointsModifier = document.createElement('input')
 
     pointsModifier.setAttribute('placeholder', 'pontos')
+
     pointsModifier.setAttribute('type', 'number')
 
     pointsModifier.setAttribute('step', '10')

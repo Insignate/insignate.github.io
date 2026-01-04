@@ -4,11 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js" defer></script>
+    <script src="./js/vue.global.prod.js" defer> </script>
+    <script src="./js/vuescript.js" defer></script>
     <title>Ligretto</title>
 </head>
-<body>
-    <section class="header"><span id="game-full-name">Jogo <span id="game-name">Ligretto</span></span></section>
+<body id="root">
+    <div class="game-container">
+        <form
+            @submit.prevent="createGame" 
+            class="window players-qtt-container"
+        >
+            <label for="players">Número de jogadores?</label>
+            <input 
+                style="margin: 8px 0" 
+                type="number" 
+                id="players"
+                v-model.number="numJogadores"
+                min="1"
+                step="1"
+                placeholder="Jogadores?"
+            >
+            <input style="width: 100%; text-align: center;" @click="createGame" type="submit" value="Começar!">
+        </form>
+        <section class="window">
+            <button @click="calcAll">Calcular Tudo</button>
+        </section>
+        <section class="window">
+            <span>Rodada</span>
+            <h1>{{numRodada}}</h1>
+            <button @click="addRound">Add Rodada</button>
+        </section>
+    </div>
+    <div class="window-container">
+        <div class="window points-container">
+            <ul>
+                <li v-for="j in gameScores" :key="j.id">
+                    <input type="text" class="single-player-name" :value="'Jogador ' + j.id">
+                    <input type="text" v-model.number="j.changeScore" placeholder="Pontos">
+                    <span style="padding: 0 .6em">{{j.score}}</span>
+                    <button sytle="padding: .5em 1em" @click="changeScore(j)">Calcular</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <!-- <section class="header"><span id="game-full-name">Jogo <span id="game-name">Ligretto</span></span></section>
     <section class="game-container">
         <form id="new-game" class="window players-qtt-container">
             <label for="players">Número de jogadores?</label>
@@ -16,7 +57,7 @@
             <input style="width: 100%; text-align: center;" type="submit" value="Começar!">
         </form>
     </section>
-    <section id="all-players">
+    <section id="all-players"> -->
 
     </section>
 </body>
