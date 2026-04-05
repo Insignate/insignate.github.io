@@ -155,9 +155,16 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const resetGame = () => {
-        console.log('Resetting game scores...');
-        localStorage.removeItem('ligretto2_state');
-        location.reload();
+        console.log('Resetting scores for current players...');
+        state.players.forEach(p => {
+            p.score = 0;
+            p.currentRound = 0;
+        });
+        state.round = 1;
+        state.history = [];
+        state.redoStack = [];
+        renderGame();
+        saveState();
     };
 
     // --- Rendering ---
